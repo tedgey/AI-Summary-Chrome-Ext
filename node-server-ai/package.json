@@ -1,0 +1,17 @@
+{
+  "name": "server-ai",
+  "version": "1.0.0",
+  "description": "A node server to speak with openAI",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tom Edgeworth",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "openai": "^4.57.0"
+  }
+}

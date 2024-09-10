@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Tom's AI Summary Extension",
+  "version": "1.0",
+  "description": "Summarize the web page you're on and digest information more quickly.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "quill-256.png",
+      "48": "quill-256.png",
+      "128": "quill-256.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["contentScript.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "host_permissions": [
+    "http://*/",
+    "https://*/"
+  ]
+}
